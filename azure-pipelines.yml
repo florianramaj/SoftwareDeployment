@@ -26,3 +26,10 @@ steps:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/test-*.xml'
     searchFolder: '$(Build.SourcesDirectory)/WebApp'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
+    appType: 'webAppLinux'
+    appName: 'webappramaj'
+    package: '$(System.DefaultWorkingDirectory)'
+    customWebConfig: '-Handler iisnode -NodeStartFile server.js -appType node'
