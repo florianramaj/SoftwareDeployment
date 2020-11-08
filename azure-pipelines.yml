@@ -40,11 +40,12 @@ steps:
     appType: 'webAppLinux'
     appName: 'webappramaj'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-- task: AzureWebApp@1
+- task: AzureRmWebAppDeployment@4
   inputs:
+    ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
     appType: 'webAppLinux'
-    appName: 'webappramaj'
-    package: '$(Build.SourcesDirectory)/WebApp'
-    customWebConfig: '-Handler iisnode -NodeStartFile WebApp/app.js -appType node'
+    WebAppName: 'webappramaj'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
 - task: PublishBuildArtifacts@1
