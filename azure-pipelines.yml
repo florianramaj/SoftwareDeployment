@@ -20,6 +20,7 @@ steps:
     npm install
     npm run build
     npm test
+    node app.js
   displayName: 'npm install and build'
   workingDirectory: '$(Build.SourcesDirectory)/WebApp'
 - task: PublishTestResults@2
