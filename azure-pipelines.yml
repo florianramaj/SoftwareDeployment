@@ -29,8 +29,7 @@ steps:
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
-    appType: 'webApp'
-    appName: 'webappramaj2'
+    appType: 'webAppLinux'
+    appName: 'webappramaj'
     package: '$(System.DefaultWorkingDirectory)'
-    deploymentMethod: 'auto'
     customWebConfig: '-Handler iisnode -NodeStartFile app.js -appType node'
