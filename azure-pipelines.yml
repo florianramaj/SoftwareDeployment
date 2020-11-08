@@ -33,4 +33,4 @@ steps:
     appType: 'webAppLinux'
     appName: 'webappramaj'
     package: '$(System.DefaultWorkingDirectory)'
-    customWebConfig: '-Handler iisnode -NodeStartFile app.js -appType node'
+    customWebConfig: '-Handler iisnode -NodeStartFile WebApp/app.js -appType node'
