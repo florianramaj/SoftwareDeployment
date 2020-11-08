@@ -20,7 +20,6 @@ steps:
     npm install
     npm run build
     npm test
-    node app.js
   displayName: 'npm install and build'
   workingDirectory: '$(Build.SourcesDirectory)/WebApp'
 - task: PublishTestResults@2
@@ -33,5 +32,5 @@ steps:
     azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
     appType: 'webAppLinux'
     appName: 'webappramaj'
-    package: '$(System.DefaultWorkingDirectory)'
+    package: '$(Build.SourcesDirectory)/WebApp'
     customWebConfig: '-Handler iisnode -NodeStartFile WebApp/app.js -appType node'
