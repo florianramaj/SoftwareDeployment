@@ -40,6 +40,6 @@ steps:
     azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
     appType: 'webAppLinux'
     WebAppName: 'webappramaj'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/*.zip'
 
 - task: PublishBuildArtifacts@1
