@@ -34,12 +34,13 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/test-*.xml'
-- task: AzureRmWebAppDeployment@4
+
+- task: AzureWebApp@1
   inputs:
-    ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
     appType: 'webAppLinux'
-    WebAppName: 'webappramaj'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/*.zip'
+    appName: 'webappramaj'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    customWebConfig: '-Handler iisnode -NodeStartFile WebApp/app.js -appType node'
 
 - task: PublishBuildArtifacts@1
