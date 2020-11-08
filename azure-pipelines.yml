@@ -21,6 +21,6 @@ steps:
   displayName: 'npm install and build'
 - task: PublishTestResults@2
   inputs:
-    testResultsFormat: 'JUnit'
+    testResultsFormat: 'NUnit'
     testResultsFiles: '**/TEST-*.xml'
-    searchFolder: '/'
+
