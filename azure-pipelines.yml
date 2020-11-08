@@ -18,9 +18,10 @@ steps:
 
 - script: |
     npm install
+    npm test
   displayName: 'npm install and build'
-- task: Npm@1
+  workingDirectory: '$(Build.SourcesDirectory)/WebApp'
+- task: PublishTestResults@2
   inputs:
-    command: 'custom'
-    workingDir: 'SoftwareDeployment\WebApp'
-    customCommand: 'run test'
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/test-*.xml'
