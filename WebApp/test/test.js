@@ -1,3 +1,8 @@
+let appInsights = require("applicationinsights");
+appInsights
+  .setup("aa6fb425-d1c2-4fca-bd5a-5115b190f2b4")
+  .setDistributedTracingMode(appInsights.DistributedTracingModes.AI_AND_W3C)
+  .start()
 var assert = require('assert');
 describe('Array', function() {
   describe('#indexOf()', function() {
