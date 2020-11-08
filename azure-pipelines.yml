@@ -43,3 +43,4 @@ steps:
     appName: 'webappramaj'
     package: '$(Build.SourcesDirectory)/WebApp'
     customWebConfig: '-Handler iisnode -NodeStartFile WebApp/app.js -appType node'
+- task: PublishBuildArtifacts@1
