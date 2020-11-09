@@ -39,4 +39,3 @@ steps:
     appName: 'webappramaj'
     package: '$(System.DefaultWorkingDirectory)/WebApp'
     customWebConfig: '-Handler iisnode -NodeStartFile app.js -appType node'
-    startUpCommand: 'npm run start'
