@@ -8,7 +8,7 @@ appInsights
 
 app.set("view engine", "jade");
 
-app.get('/test', (req, res) => {
+app.get('/', (req, res) => {
   res.render("index");
 })
 
