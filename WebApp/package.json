@@ -17,6 +17,7 @@
   "dependencies": {
     "applicationinsights": "^1.8.8",
     "express": "^4.17.1",
+    "jade": "^1.11.0",
     "mocha-junit-reporter": "^2.0.0"
   }
 }
