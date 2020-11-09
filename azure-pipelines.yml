@@ -22,13 +22,9 @@ steps:
   displayName: 'npm install and build'
   workingDirectory: '$(Build.SourcesDirectory)/WebApp'
 
-- task: ArchiveFiles@2
+- task: PublishBuildArtifacts@1
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/WebApp'
-    includeRootFolder: false
-- task: PublishPipelineArtifact@0
-  inputs:
-    targetPath: '$(System.ArtifactsDirectory)'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/WebApp'
 
 
 - task: PublishTestResults@2
