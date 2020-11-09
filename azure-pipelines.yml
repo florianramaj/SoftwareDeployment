@@ -35,6 +35,6 @@ steps:
   inputs:
     azureSubscription: 'Azure for Students(66a873d7-8b5e-4461-9b6c-ee180ae3147c)'
     appType: 'webAppLinux'
-    appName: 'webappramaj'
+    appName: 'webappramaj2'
     package: '$(System.DefaultWorkingDirectory)/WebApp'
     customWebConfig: '-Handler iisnode -NodeStartFile app.js -appType node'
