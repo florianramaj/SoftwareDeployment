@@ -13,11 +13,12 @@ https://webappramaj2.azurewebsites.net/
 siehe unter Lab2/ErfolgreicherTestfall.PNG
 
 ## Nicht erfolgreiche Deployments
+Beim Testfall wurde der erwartete Wert auf 1 geändert somit scheitert der Test:
 
 siehe unter Lab2/NegativerTestfall.PNG
 
 # Screenshot der Azure DevOps Release Pipeline
-
+Beim Testfall wurde der erwartete Wert auf -1 gesetzt somit läuft der Build durch:
 siehe unter Lab2/ReleasePipeline.PNG
 
 # Dokumentation wie die Releases freigegeben werden
