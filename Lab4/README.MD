@@ -50,3 +50,4 @@ Mit `kubectl get pvc` kann kontrolliert werden ob diese vorhanden sind.
 
 Mittels `kubectl get services` sieht man alles vorhandenen Services und mittels `kubectl get services wordpress` sieht man die Wordpress Services.
 Wenn die Wordpress Services sieht, dann ist der Wordpress Service unter der external IP erreichbar.
+IP: http://40.114.177.43
